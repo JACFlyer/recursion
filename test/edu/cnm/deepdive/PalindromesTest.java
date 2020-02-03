@@ -13,21 +13,24 @@ class PalindromesTest {
       "",
       "x",
       "Xx",
-      "A man, a plan, a canal - Panama",
+      "A man, a plan, a canal - Panama"
   };
 
   static final String[] negativeTestData = {
       "xy",
       "sonar",
       "Madame I'm Adam",
-      "Burrito dog",
+      "Burrito dog"
   };
 
   @Test
-  void isPalindrome() {
-    for (String testCase  : positiveTestData) {
+  void isPalindromeAffirmative() {
+    for (String testCase : positiveTestData) {
       assertTrue(Palindromes.isPalindrome(testCase));
     }
+  }
+    @Test
+  void isPalindromeNegative() {
     for (String testCase : negativeTestData) {
       assertFalse(Palindromes.isPalindrome(testCase));
     }
